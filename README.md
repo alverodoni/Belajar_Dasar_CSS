@@ -30,7 +30,8 @@ Implementasi Navigasi dan Selector Class/ID. Desain mulai terbentuk: navigasi me
 Finalisasi Tampilan dengan Selector Lanjutan. Ini adalah hasil akhir yang kompleks. Bagian #intro diberi background biru/teal penuh (menggunakan ID Selector) dan tombol (.button / .btn-primary) diubah menjadi merah, menunjukkan penggunaan class dan ID selector secara efektif untuk menciptakan section yang kontras dan menarik.
 <img width="1912" height="968" alt="5  Menambahkan CSS Selector" src="https://github.com/user-attachments/assets/009a6a44-494e-4ed3-bdd2-2c0780cd8e6b" />
 
-'python
+```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -328,9 +329,3 @@ nav a:hover {
 
 </body>
 </html>
-
-
-
-
-
-
