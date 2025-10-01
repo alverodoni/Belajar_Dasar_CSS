@@ -5,6 +5,9 @@ Kelas: TI.24.A.5 <P>
 Jurusan: Teknik Informatika <p>
 Mata Kuliah: Pemograman Web 1 <p>
 
+### Link Web yang dibuat
+file:///C:/xampp/htdocs/Lab2_css_dasar.html/CSS%20DASAR.html#
+
 ### Tahap 1: Struktur Dasar HTML
 **Deskripsi:**
 Menampilkan dokumen HTML awal tanpa CSS eksternal atau internal, hanya menggunakan tag dasar HTML (`<h1>`, `<p>`, `<a>`). Ini menunjukkan kerangka konten sebelum proses *styling* dimulai.
