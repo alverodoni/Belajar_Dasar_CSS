@@ -270,8 +270,11 @@ nav a:hover {
             });
         });
         
-        // Optional: Trigger a click on the first link (CSS Dasar) to show its content on page load
-        // document.getElementById('nav-css-dasar').click();
+        // **Modification:** Trigger a click on the first link (CSS Dasar) to show its content on page load
+        const defaultLink = document.getElementById('nav-css-dasar');
+        if (defaultLink) {
+            defaultLink.click();
+        }
     });
 </script>
 
