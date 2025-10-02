@@ -332,3 +332,108 @@ nav a:hover {
 
 </body>
 </html>
+
+### Pertanyaan dan Tugas
+1. Lakukan eksperimen dengan mengubah dan menambah properti dan nilai pada kode CSS dengan mengacu pada CSS Cheat Sheet yang diberikan pada file terpisah dari modul ini
+jawaban
+```html
+/* 1. Styling Dasar */
+body {
+    font-family:'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Ditambahkan */
+    background-color: #f4f4f4; /* Ditambahkan */
+}
+/* ... */
+h1 {
+    font-size: 24px;
+    color: #0F189F;
+    text-align: left; /* Diubah dari center */
+    padding: 20px 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Ditambahkan */
+}
+/* ... */
+/* 2. Styling Navigasi */
+nav {
+    background: #20A759;
+    color: #fff;
+    padding: 0;
+    /* ... */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ditambahkan */
+}
+/* ... */
+nav .active,
+nav a:hover {
+    background: #20A759; /* Diubah: warna tetap hijau */
+    color: #ffeb3b; /* Ditambahkan: teks kuning */
+    text-decoration: none;
+    border-radius: 5px; /* Ditambahkan */
+}
+
+/* 3. ID Selector (#intro) */
+#intro {
+    background: #418fb1;
+    border: none;
+    /* ... */
+    border-top: 5px solid #E42A42; /* Ditambahkan */
+}
+/* ... */
+/* 3.1 Styling the paragraph text inside #intro */
+#intro p {
+    color: #f0f8ff;
+    font-size: 18px; /* Diubah dari 16px */
+    text-align: left;
+    line-height: 1.6;
+}
+ 
+/* 4. Class Selector (.button, .btn-primary) */
+.button {
+    padding: 15px 20px;
+    background: #E42A42;
+    color: #fff;
+    /* ... */
+    text-decoration: none;
+    transition: background 0.3s ease; /* Ditambahkan */
+}
+2. Apa perbedaan pendeklarasian CSS elemen h1 {...} dengan #intro h1 {...}? berikan 
+penjelasannya!
+Jawaban
+Penggunaan #intro h1 {...} memungkinkan Anda untuk memberikan style khusus pada <h1> yang berada dalam suatu bagian tertentu (yang memiliki id="intro"), tanpa mengubah style <h1> lainnya yang berada di luar bagian tersebut.
+3. Apabila ada deklarasi CSS secara internal, lalu ditambahkan CSS eksternal dan inline CSS pada elemen yang sama. Deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
+Jawaban
+Inline CSS memiliki prioritas tertinggi karena ia melekat langsung pada elemen yang bersangkutan, sehingga akan menimpa (meng-override) style dari Internal dan External CSS untuk properti yang sama.
+Contoh
+Misalkan terdapat tiga Deklarasi untuk elemen
+     1. External CSS (di style.css):
+        p { color: green; font-size: 14px; }
+     2. Internal CSS (di <head>):
+        p { color: red; font-size: 16px; }
+     3. Inline CSS (pada elemen):
+<p style="color: blue; text-align: center;">Ini adalah paragraf.</p>
+4. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
+jawaban
+     1. Inline Style (Prioritas tertinggi, dihitung sebagai 1,0,0,0)
+     2. ID Selector (Tingkat kekhususan tinggi, dihitung sebagai 0,1,0,0)
+     3. Class Selector (Tingkat kekhususan menengah, dihitung sebagai 0,0,1,0)
+     4. Element Selector (Tingkat kekhususan rendah, dihitung sebagai 0,0,0,1)
+Contoh:
+1. Misalkan terdapat elemen HTML:
+<p id="paragraf-1" class="text-paragraf">Ini adalah paragraf dengan ID dan Class.</p>
+2. Dan deklarasi CSS:
+```html
+/* Class Selector */
+.text-paragraf {
+    color: red; /* Properti A */
+    font-size: 14pt; /* Properti B */
+}
+
+/* ID Selector */
+#paragraf-1 {
+    color: blue; /* Properti A (Menimpa) */
+    text-align: justify; /* Properti C (Menambah) */
+}
+
+
+
+       
